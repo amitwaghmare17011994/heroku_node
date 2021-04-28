@@ -1,0 +1,33 @@
+{
+  "name": "BestStud",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "link-module-alias &  nodemon index.js",
+    "postinstall": "link-module-alias",
+    "debug":"node --inspect"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "_moduleAliases": {
+    "Student": "./models/Student/index.js",
+    "StudentHandler":"./handlers/student/index.js",
+    "Constants":"constants.js",
+    "Connection":"connection.js"
+  },
+  "dependencies": {
+    "@babel/core": "^7.12.16",
+    "@hapi/hapi": "^20.0.3",
+    "babel-watch": "^7.4.0",
+    "joi": "^17.3.0",
+    "mongoose": "^5.11.7",
+    "nodemon": "^2.0.6"
+  },
+  "type": "module",
+  "devDependencies": {
+    "link-module-alias": "^1.2.0"
+  }
+}
